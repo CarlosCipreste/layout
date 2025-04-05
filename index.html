@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+    <title>Layout Challenge</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="sticky top-0 left-0 w-full bg-white shadow-md z-50"">
+        <div class=" bg-blue-500 flex justify-center h-fit text-white">
+        <p>Ganhe <span class='bg-purple-900'>R$10,00</span> de desconto no seu primeiro pedido, Utilize o cupom
+            DESCONTO10</p>
+        </div>
+
+        <div class="container mx-auto p-4 flex flex-row gap-5 items-center justify-between h-fit">
+
+            <h1 class="text-2xl font-bold">AVANTI</h1>
+
+
+            <!-- SEARCH BAR -->
+            <div
+                class="flex w-full p-2 justify-center item-center rounded-xl outline-2 outline-gray-300 focus-within:outline-gray-500">
+
+
+                    <input id="search-input" type="text" required placeholder='O que você está procurando?'
+                        class='outline-0 p-2 font-bold w-full' />
+                    <button class='mx-2 cursor-pointer hover:bg-gray-100 active:bg-gray-200 rounded-xl p-1'
+                        id="search-button" onclick="searchBar()">
+                        <img src="assets/search.svg" alt="svg" height="24" width="24">
+                    </button>
+
+                    
+
+            </div>
+            <!-- SEARCHBAR END -->
+
+
+            <!-- USERBUTTON -->
+            <div class="flex flex-row items-center">
+                <button class='items-center flex cursor-pointer  hover:bg-gray-200 active:bg-gray-300 rounded p-1'>
+                    <img src="assets/user.svg" height="36" width="36" />
+                    <p class='hidden md:block text-start'>Olá, Nome cliente!</p>
+                </button>
+
+            </div>
+            <!-- USERBUTTON END -->
+
+
+            <!-- CART -->
+            <button class='relative cursor-pointer hover:bg-gray-200 active:bg-gray-300 rounded p-1'>
+                <span
+                    class="absolute top-[-10px] right-[-15px] rounded-[30px] bg-[#005CFF] w-[21px] h-[21px] animate-ping"></span>
+                <span
+                    class="absolute top-[-10px] right-[-15px] rounded-[30px] bg-[#005CFF] w-[21px] h-[21px] flex justify-center items-center text-white font-bold text-[12px]">2</span>
+                <img src="assets/shopping-cart.svg" height="36" width="36" />
+
+            </button>
+            <!-- CART END -->
+        </div>
+
+        <p id="message" class="flex w-full justify-center"></p>
+        <!-- DROPDOWN BUTTON -->
+        <div id="buttons-container" class="container mx-auto flex flex-row items-center justify-between py-4 relative">
+        </div>
+        <!-- DROPDOWN BUTTON END-->
+
+        <!-- DROPDOWN MENU -->
+        <div id="dropdown-menu" class="py-4 container mx-auto flex flex-row justify-between">
+
+        </div>
+        <!-- DROPDOWN MENU END -->
+        </div>
+
+    </header>
+    <!-- FIM DE HEADER -->
+
+    <main>
+
+        <!-- BANNER -->
+        <section class="w-full h-auto">
+            <img src="https://placehold.co/1920x600" class="" alt="">
+        </section>
+
+        <!-- BANNER END -->
+
+
+        <section class="container mx-auto mt-4 mb-24">
+            <div class="flex flex-row justify-between my-4">
+                <h1 class="text-xl font-bold">Lançamentos</h1>
+                <p class="font-bold">Ver mais</p>
+            </div>
+
+            <!-- CARDS CAROUSEL -->
+            <div>
+                <section class="splide n1" aria-label="Splide carousel">
+                    <div class="splide__track gradient bg-linear-to-r from-gray-50 to-gray-100">
+                        <ul class="splide__list">
+
+                            <li class="splide__slide flex items-center max-w-[300px] flex-shrink-0">
+                                <div class="border-1 rounded-xl border-gray-200 flex flex-col ">
+
+                                    <div class="relative">
+                                        <p class="p-1 z-10 absolute left-2 top-2 rounded bg-blue-700 text-white">Novo
+                                        </p>
+                                        <img src="https://placehold.co/300x300/white/gray" class="rounded-t-2xl" alt="">
+                                    </div>
+                                    <article class="flex flex-col px-2">
+                                        <h3 class="break-words text-start">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                        </h3>
+
+                                        <div class="flex px-2">
+                                            <div class="mr-4">
+                                                <s>R$ 100,00</s>
+                                                <p class="text-lg font-bold">R$ 79,90</p>
+                                            </div>
+                                            <div class="flex items-center ">
+                                                <u class="p-1 rounded bg-cyan-500 text-white">10% OFF</u>
+                                            </div>
+
+                                        </div>
+                                        <div class="my-2">
+                                            <p class="text-sm">Ou em até <span class="font-bold">10x de R$ 7,90</span>
+                                            </p>
+                                        </div>
+                                    </article>
+                                    <button
+                                        class="bg-blue-600 text-white m-2 p-4 rounded-2xl cursor-pointer hover:bg-blue-700 active:bg-blue-400">
+                                        Comprar
+                                    </button>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <!-- CARDS CAROUSEL END -->
+
+        <!-- SOBRE AVANTI 1-->
+
+        <div class="grid grid-cols-1 auto-rows-auto lg:grid-cols-2 lg:grid-rows-1 gap-12 my-6 py-12 mx-auto sm:p-0">
+            <div class="flex justify-center lg:justify-end">
+                <img src="https://placehold.co/600x700/gray/black" class="" alt="">
+            </div>
+
+            <section class="tracking-widest justify-center pr-0 lg:pr-12 xl:pr-32">
+                <h1 class="text-3xl font-bold text-balance mb-4 pl-4">LOREM IPSUM</h1>
+                <p class="text-pretty text-sm lg:text-xl px-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Fugiat, voluptates magni earum aliquam nemo ea ullam rem maiores quod voluptatem provident et nisi
+                    modi repellat soluta blanditiis eveniet. Eos, id?Lorem, ipsum dolor sit amet consectetur adipisicing
+                    elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor architecto a impedit, ut et
+                    dignissimos, quos, voluptatem vel sit mollitia quia optio. Vitae fugiat, dolore rem dicta maxime
+                    magnam impedit?</p>
+                <br>
+                <p class="text-pretty text-sm lg:text-xl px-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Fugiat, voluptates magni earum aliquam nemo ea ullam rem maiores quod voluptatem provident et nisi
+                    modi repellat soluta blanditiis eveniet. Eos, id?Lorem, ipsum dolor sit amet consectetur adipisicing
+                    elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore sed quia doloribus? Optio
+                    asperiores animi rerum! Blanditiis quasi tenetur necessitatibus praesentium, cum error, obcaecati
+                    corporis possimus voluptate, dicta minus ea.</p>
+            </section>
+        </div>
+
+
+        <!-- SOBRE AVANTI 1 END -->
+
+        <div
+            class="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-12 my-6 bg-gray-200 mx-auto py-12 md:px-12">
+
+            <section
+                class="flex flex-col tracking-widest text-justify justify-center pl-0 lg:pl-12 xl:pl-32 order-2 lg:order-1">
+
+
+                <div class="flex flex-col gap-12">
+                    <h1 class="text-3xl font-bold text-balance text-center mb-4 text-gray-600">LOREM IPSUM</h1>
+                    <div class="flex gap-6 justify-center items-center">
+                        <div class="rounded-full p-6 bg-blue-600 w-fit h-fit shrink-0 ">
+                            <img src="assets/map-pin.svg" width="64" height="64" alt="">
+                        </div>
+                        <div class="md:text-xl text-sm text-gray-500 pr-6">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit impedit nesciunt
+                                necessitatibus tempore nulla ducimus earum nobis omnis hic numquam, ipsam at, molestias
+                                facilis in maiores molestiae recusandae iure unde.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 justify-center items-center">
+                        <div class="rounded-full p-6 bg-blue-600 w-fit h-fit shrink-0 ">
+                            <img src="assets/map-pin.svg" width="64" height="64" alt="">
+                        </div>
+                        <div class="md:text-xl text-sm text-gray-500 pr-6">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit impedit nesciunt
+                                necessitatibus tempore nulla ducimus earum nobis omnis hic numquam, ipsam at, molestias
+                                facilis in maiores molestiae recusandae iure unde.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 justify-center items-center">
+                        <div class="rounded-full p-6 bg-blue-600 w-fit h-fit shrink-0 ">
+                            <img src="assets/map-pin.svg" width="64" height="64" alt="">
+                        </div>
+                        <div class="md:text-xl text-sm text-gray-500 pr-6">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit impedit nesciunt
+                                necessitatibus tempore nulla ducimus earum nobis omnis hic numquam, ipsam at, molestias
+                                facilis in maiores molestiae recusandae iure unde.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="flex justify-center lg:justify-start order-1 lg:order-2">
+                <img src="https://placehold.co/600x700/gray/black" class="" alt="">
+            </div>
+        </div>
+
+        <!-- SOBRE AVANTI 2 -->
+
+        <div class="grid grid-cols-1 auto-rows-auto lg:grid-cols-2 lg:grid-rows-1 gap-12 my-6 py-12 mx-auto sm:p-0">
+            <div class="flex justify-center lg:justify-end">
+                <img src="https://placehold.co/600x700/gray/black" class="" alt="">
+            </div>
+
+            <section class="tracking-widest justify-center pr-0 lg:pr-12 xl:pr-32">
+                <h1 class="text-3xl font-bold text-balance mb-4 pl-4">LOREM IPSUM</h1>
+                <p class="text-pretty text-sm lg:text-xl px-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Fugiat, voluptates magni earum aliquam nemo ea ullam rem maiores quod voluptatem provident et nisi
+                    modi repellat soluta blanditiis eveniet. Eos, id?Lorem, ipsum dolor sit amet consectetur adipisicing
+                    elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor architecto a impedit, ut et
+                    dignissimos, quos, voluptatem vel sit mollitia quia optio. Vitae fugiat, dolore rem dicta maxime
+                    magnam impedit?</p>
+                <br>
+                <p class="text-pretty text-sm lg:text-xl px-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Fugiat, voluptates magni earum aliquam nemo ea ullam rem maiores quod voluptatem provident et nisi
+                    modi repellat soluta blanditiis eveniet. Eos, id?Lorem, ipsum dolor sit amet consectetur adipisicing
+                    elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore sed quia doloribus? Optio
+                    asperiores animi rerum! Blanditiis quasi tenetur necessitatibus praesentium, cum error, obcaecati
+                    corporis possimus voluptate, dicta minus ea.</p>
+            </section>
+        </div>
+
+        <!-- SOBRE AVANTI 2 END -->
+
+        <section class="container mx-auto mt-4 mb-24">
+            <div class="flex flex-row justify-between my-4">
+                <h1 class="text-xl font-bold">Lançamentos</h1>
+                <p class="font-bold">Ver mais</p>
+            </div>
+
+            <!-- CARDS CAROUSEL 2-->
+            <div>
+                <section class="splide n2" aria-label="Splide carousel">
+                    <div class="splide__track gradient bg-linear-to-r from-gray-50 to-gray-100">
+                        <ul class="splide__list">
+
+                            <li class="splide__slide flex items-center max-w-[300px] flex-shrink-0">
+                                <div class="border-1 rounded-xl border-gray-200 flex flex-col ">
+
+                                    <div class="relative">
+                                        <p class="p-1 z-10 absolute left-2 top-2 rounded bg-blue-700 text-white">Novo
+                                        </p>
+                                        <img src="https://placehold.co/300x300/white/gray" class="rounded-t-2xl" alt="">
+                                    </div>
+                                    <article class="flex flex-col px-2">
+                                        <h3 class="break-words text-start">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                        </h3>
+
+                                        <div class="flex px-2">
+                                            <div class="mr-4">
+                                                <s>R$ 100,00</s>
+                                                <p class="text-lg font-bold">R$ 79,90</p>
+                                            </div>
+                                            <div class="flex items-center ">
+                                                <u class="p-1 rounded bg-cyan-500 text-white">10% OFF</u>
+                                            </div>
+
+                                        </div>
+                                        <div class="my-2">
+                                            <p class="text-sm">Ou em até <span class="font-bold">10x de R$ 7,90</span>
+                                            </p>
+                                        </div>
+                                    </article>
+                                    <button
+                                        class="bg-blue-600 text-white m-2 p-4 rounded-2xl cursor-pointer hover:bg-blue-700 active:bg-blue-400">
+                                        Comprar
+                                    </button>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <!-- CARDS CAROUSEL 2 END -->
+
+        <!-- BANNER 2 -->
+
+        <section class="relative mb-12">
+            <img src="https://placehold.co/1920x600/gray/white" alt="">
+            <p
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white text-xl p-6 w-full text-center">
+                Entre em contato conosco e verifique a disponibilidade para sua região
+            </p>
+        </section>
+        <!-- BANNER 2 END -->
+
+        <!-- MAIL SENDER  -->
+
+        <div class="my-12">
+            <h1 class="text-center text-2xl font-bold mb-6">Cadastre-se na nossa <span
+                    class="text-blue-600">newsletter</span></h1>
+            <form
+                class=" container mx-auto flex flex-col lg:flex-row sm:gap-6 bg-gray-300 py-18 rounded-2xl px-12 text-gray-500 items-center justify-around">
+                <input type="text"
+                    class="bg-white p-4 rounded-2xl placeholder-gray-700 outline-2 outline-gray-300 focus:outline-gray-500"
+                    placeholder="Digite seu nome">
+                <input type="text"
+                    class="bg-white p-4 rounded-2xl placeholder-gray-700 outline-2 outline-gray-300 focus:outline-gray-500"
+                    placeholder="Digite seu e-mail">
+                <div>
+                    <input name="email-checkbox" required type="checkbox">
+                    <label for="email-checkbox" class="font-bold">Estou de acordo com a <a href="#"><u>politica de
+                                privacidade</u></a></label>
+                </div>
+                <button
+                    class="p-4 bg-blue-500 text-white cursor-pointer hover:bg-blue-600 active:bg-blue-400 rounded-2xl">
+                    Cadastrar
+                </button>
+            </form>
+        </div>
+
+        <!-- MAIL SENDER END -->
+
+    </main>
+
+    <footer>
+        <!-- FOOTER NAV -->
+        <div class="flex flex-col gap-8 bg-gray-100 py-18 px-22">
+            <div class="flex flex-row gap-6 bg-gray-100 items-center justify-around text-gray-700">
+                <div class="flex flex-col justify-center items-center gap-4">
+                    <h1 class="text-2xl"><strong>AVANTI</strong></h1>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <img src="assets/instagram.svg" alt="" width="32" height="32">
+                        <img src="assets/facebook.svg" alt="" width="32" height="32">
+                        <img src="assets/youtube.svg" alt="" width="32" height="32">
+                        <img src="assets/tiktok.svg" alt="" width="32" height="32">
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h4><strong>Institucional</strong></h4>
+                    <h5>Sobre Nós</h5>
+                    <h5>Nossas Lojas</h5>
+                    <h5>Privacidade e Segurança</h5>
+                    <h5>Termos e Condições</h5>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h4><strong>Central de Ajuda</strong></h4>
+                    <h5>Fale Conosco</h5>
+                    <h5>Frete e Entrega</h5>
+                    <h5>Trocas e devoluções</h5>
+                    <h5>Formas de Pagamento</h5>
+                    <h5>FAQ</h5>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h4><strong>Atendimento</strong></h4>
+                    <h5><strong>Telefone</strong>: (00) 1234-5678</h5>
+                    <h5><strong>E-Mail</strong>: exemplo@exemplo.com.br</h5>
+                    <h5><strong>Horário de atendimento</strong>:</h5>
+                    <h5>Segunda e Sábado: 07h00 às 23h00</h5>
+                    <h5>Domingos e Feriados: 07h00 às 21h00</h5>
+                    <h5></h5>
+                </div>
+            </div>
+
+            <div class="flex flex-row items-center justify-center gap-8">
+                <img src="assets/amex.svg" alt="" width="32" height="32">
+                <img src="assets/mastercard.svg" alt="" width="32" height="32">
+                <img src="assets/visa.svg" alt="" width="32" height="32">
+                <img src="assets/hipercard.svg" alt="" width="32" height="32">
+                <img src="assets/elo.svg" alt="" width="32" height="32">
+                <img src="assets/barcode.svg" alt="" width="32" height="32">
+                <img src="assets/paypal.svg" alt="" width="32" height="32">
+                <img src="assets/pix.svg" alt="" width="32" height="32">
+            </div>
+
+        </div>
+        <!-- FOOTER NAV END -->
+
+        <!-- FINAL DETAILS  -->
+
+        <div class="flex flex-col text-center text-sm md:text-lg p-12 container mx-auto">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis explicabo vel doloremque
+                deleniti iusto facilis, vero eaque assumenda consectetur necessitatibus. Nesciunt eveniet aperiam
+                pariatur id fugiat asperiores suscipit sint.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis explicabo vel doloremque
+                deleniti iusto facilis, vero eaque assumenda consectetur necessitatibus. Nesciunt eveniet aperiam
+                pariatur id fugiat asperiores suscipit sint.</p>
+            <div class="flex flex-row justify-center items-center gap-8 ">
+                <div class="flex flex-row p-4 gap-4">
+                    <img src="assets/letsencrypticon.png" alt="" width="68">
+                    <img src="assets/vtext.png" alt="" width="68">
+                    <!-- Não consegui achar o icone correto então repeti este vtex -->
+                </div>
+                <div class="flex flex-row p-4 gap-4">
+                    <img src="assets/avantiLogo.png" class="bg-gray-800" alt="">
+                    <img src="assets/vtext.png" alt="" width="68">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FINAL DETAILS  END -->
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
