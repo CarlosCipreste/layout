@@ -37,17 +37,12 @@
             <!-- SEARCH BAR -->
             <div
                 class="flex w-full p-2 justify-center item-center rounded-xl outline-2 outline-gray-300 focus-within:outline-gray-500">
-
-
-                    <input id="search-input" type="text" required placeholder='O que você está procurando?'
-                        class='outline-0 p-2 font-bold w-full' />
-                    <button class='mx-2 cursor-pointer hover:bg-gray-100 active:bg-gray-200 rounded-xl p-1'
-                        id="search-button" onclick="searchBar()">
-                        <img src="assets/search.svg" alt="svg" height="24" width="24">
-                    </button>
-
-                    
-
+                <input id="search-input" type="text" required placeholder='O que você está procurando?'
+                    class='outline-0 p-2 font-bold w-full' />
+                <button class='mx-2 cursor-pointer hover:bg-gray-100 active:bg-gray-200 rounded-xl p-1'
+                    id="search-button" onclick="searchBar()">
+                    <img src="assets/search.svg" alt="svg" height="24" width="24">
+                </button>
             </div>
             <!-- SEARCHBAR END -->
 
@@ -58,7 +53,6 @@
                     <img src="assets/user.svg" height="36" width="36" />
                     <p class='hidden md:block text-start'>Olá, Nome cliente!</p>
                 </button>
-
             </div>
             <!-- USERBUTTON END -->
 
@@ -76,13 +70,14 @@
         </div>
 
         <p id="message" class="flex w-full justify-center"></p>
+
         <!-- DROPDOWN BUTTON -->
         <div id="buttons-container" class="container mx-auto flex flex-row items-center justify-between py-4 relative">
         </div>
         <!-- DROPDOWN BUTTON END-->
 
         <!-- DROPDOWN MENU -->
-        <div id="dropdown-menu" class="py-4 container mx-auto flex flex-row justify-between">
+        <div id="dropdown-menu" class="pt-4 bg-white container mx-auto flex flex-row justify-between">
 
         </div>
         <!-- DROPDOWN MENU END -->
@@ -94,8 +89,22 @@
     <main>
 
         <!-- BANNER -->
-        <section class="w-full h-auto">
-            <img src="https://placehold.co/1920x600" class="" alt="">
+        <section class="mx-auto  flex items-center bg-gray-200 rounded-lg h-96">
+            <div class="w-1/2 h-full flex justify-end">
+                <img src="https://theclassictshirt.com/cdn/shop/articles/Minimalist_wardrobe_The_Classic_T-Shirt.jpg?v=1602507970&width=2840"
+                    alt="Promoção" class="rounded-lg w-96 h-full object-cover">
+            </div>
+            <div class="w-1/2 flex justify-start items-end">
+                <div class="p-0">
+                    <div class="flex items-baseline">
+                        <h2 class="text-7xl font-bold">SUPER</h2>
+                        <h2 class="text-7xl">SALE</h2>
+                    </div>
+                    <p class="text-xl text-blue-600 mt-8 flex justify-center tracking-widest">ITENS SELECIONADOS COM ATÉ
+                    </p>
+                    <p class="text-5xl text-blue-600 font-bold mt-2 flex justify-center">50% OFF</p>
+                </div>
+            </div>
         </section>
 
         <!-- BANNER END -->
@@ -119,7 +128,8 @@
                                     <div class="relative">
                                         <p class="p-1 z-10 absolute left-2 top-2 rounded bg-blue-700 text-white">Novo
                                         </p>
-                                        <img src="https://placehold.co/300x300/white/gray" class="rounded-t-2xl" alt="">
+                                        <img src="https://www.insiderstore.com.br/cdn/shop/files/01_crop_tech_u-2.jpg?v=1742334728"
+                                            class="rounded-t-2xl" alt="">
                                     </div>
                                     <article class="flex flex-col px-2">
                                         <h3 class="break-words text-start">
@@ -158,20 +168,20 @@
         <!-- SOBRE AVANTI 1-->
 
         <div class="grid grid-cols-1 auto-rows-auto lg:grid-cols-2 lg:grid-rows-1 gap-12 my-6 py-12 mx-auto sm:p-0">
-            <div class="flex justify-center lg:justify-end">
-                <img src="https://placehold.co/600x700/gray/black" class="" alt="">
+            <div class="flex justify-center lg:justify-end pl-0 lg:pl-12 xl:pl-32">
+                <img src="https://i.postimg.cc/FRXNYRV1/imagem-2025-03-28-190946917.png" class="" alt="">
             </div>
 
             <section class="tracking-widest justify-center pr-0 lg:pr-12 xl:pr-32">
                 <h1 class="text-3xl font-bold text-balance mb-4 pl-4">LOREM IPSUM</h1>
-                <p class="text-pretty text-sm lg:text-xl px-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                <p class="text-pretty md:text-xl text-sm lg:text-xl px-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Fugiat, voluptates magni earum aliquam nemo ea ullam rem maiores quod voluptatem provident et nisi
                     modi repellat soluta blanditiis eveniet. Eos, id?Lorem, ipsum dolor sit amet consectetur adipisicing
                     elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor architecto a impedit, ut et
                     dignissimos, quos, voluptatem vel sit mollitia quia optio. Vitae fugiat, dolore rem dicta maxime
                     magnam impedit?</p>
                 <br>
-                <p class="text-pretty text-sm lg:text-xl px-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                <p class="text-pretty md:text-xl text-sm lg:text-xl px-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Fugiat, voluptates magni earum aliquam nemo ea ullam rem maiores quod voluptatem provident et nisi
                     modi repellat soluta blanditiis eveniet. Eos, id?Lorem, ipsum dolor sit amet consectetur adipisicing
                     elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore sed quia doloribus? Optio
@@ -227,27 +237,27 @@
             </section>
 
             <div class="flex justify-center lg:justify-start order-1 lg:order-2">
-                <img src="https://placehold.co/600x700/gray/black" class="" alt="">
+                <img src="https://i.postimg.cc/gk0VSyfy/imagem-2025-03-28-192206968.png" class="" alt="">
             </div>
         </div>
 
         <!-- SOBRE AVANTI 2 -->
 
         <div class="grid grid-cols-1 auto-rows-auto lg:grid-cols-2 lg:grid-rows-1 gap-12 my-6 py-12 mx-auto sm:p-0">
-            <div class="flex justify-center lg:justify-end">
-                <img src="https://placehold.co/600x700/gray/black" class="" alt="">
+            <div class="flex justify-center lg:justify-end pl-0 lg:pl-12 xl:pl-32">
+                <img src="https://i.postimg.cc/FRXNYRV1/imagem-2025-03-28-190946917.png" class="" alt="">
             </div>
 
             <section class="tracking-widest justify-center pr-0 lg:pr-12 xl:pr-32">
                 <h1 class="text-3xl font-bold text-balance mb-4 pl-4">LOREM IPSUM</h1>
-                <p class="text-pretty text-sm lg:text-xl px-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                <p class="text-pretty md:text-xl text-sm lg:text-xl px-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Fugiat, voluptates magni earum aliquam nemo ea ullam rem maiores quod voluptatem provident et nisi
                     modi repellat soluta blanditiis eveniet. Eos, id?Lorem, ipsum dolor sit amet consectetur adipisicing
                     elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor architecto a impedit, ut et
                     dignissimos, quos, voluptatem vel sit mollitia quia optio. Vitae fugiat, dolore rem dicta maxime
                     magnam impedit?</p>
                 <br>
-                <p class="text-pretty text-sm lg:text-xl px-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                <p class="text-pretty md:text-xl text-sm lg:text-xl px-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Fugiat, voluptates magni earum aliquam nemo ea ullam rem maiores quod voluptatem provident et nisi
                     modi repellat soluta blanditiis eveniet. Eos, id?Lorem, ipsum dolor sit amet consectetur adipisicing
                     elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore sed quia doloribus? Optio
@@ -276,7 +286,8 @@
                                     <div class="relative">
                                         <p class="p-1 z-10 absolute left-2 top-2 rounded bg-blue-700 text-white">Novo
                                         </p>
-                                        <img src="https://placehold.co/300x300/white/gray" class="rounded-t-2xl" alt="">
+                                        <img src="https://www.insiderstore.com.br/cdn/shop/files/01_crop_tech_u-2.jpg?v=1742334728"
+                                            class="rounded-t-2xl" alt="">
                                     </div>
                                     <article class="flex flex-col px-2">
                                         <h3 class="break-words text-start">
@@ -314,16 +325,16 @@
 
         <!-- BANNER 2 -->
 
-        <section class="relative mb-12">
-            <img src="https://placehold.co/1920x600/gray/white" alt="">
-            <p
-                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white text-xl p-6 w-full text-center">
-                Entre em contato conosco e verifique a disponibilidade para sua região
-            </p>
+        <section
+            class=" py-12 mt-4 bg-[url('https://images.adsttc.com/media/images/5f34/861e/b357/65bf/b500/0113/medium_jpg/_B3A1690.jpg?1597277714')] bg-center bg-cover h-96 flex items-center justify-center">
+            <div class="flex bg-blue-700 text-white items-center justify-center h-32 w-full">
+                <p class="text-2xl items-center">Entre em contato conosco e verifique a disponibilidade para sua região!
+                </p>
+            </div>
         </section>
         <!-- BANNER 2 END -->
 
-        <!-- MAIL SENDER  -->
+        <!-- NEWSLETTER  -->
 
         <div class="my-12">
             <h1 class="text-center text-2xl font-bold mb-6">Cadastre-se na nossa <span
@@ -348,7 +359,7 @@
             </form>
         </div>
 
-        <!-- MAIL SENDER END -->
+        <!-- NEWSLETTER END -->
 
     </main>
 
@@ -358,7 +369,7 @@
             <div class="flex flex-row gap-6 bg-gray-100 items-center justify-around text-gray-700">
                 <div class="flex flex-col justify-center items-center gap-4">
                     <h1 class="text-2xl"><strong>AVANTI</strong></h1>
-                    <div class="flex flex-col md:flex-row gap-6">
+                    <div class="flex flex-col lg:flex-row gap-6">
                         <img src="assets/instagram.svg" alt="" width="32" height="32">
                         <img src="assets/facebook.svg" alt="" width="32" height="32">
                         <img src="assets/youtube.svg" alt="" width="32" height="32">

@@ -115,7 +115,7 @@ function renderDropdowns(container) {
         const imagemDiv = document.createElement("div");
         imagemDiv.className = "flex flex-col justify-center relative rounded-2xl overflow-hidden";
         imagemDiv.innerHTML = `
-            <img src="https://placehold.co/300x350/gray/gray" alt="" class="hidden md:block">
+            <img src="https://i.postimg.cc/gk0VSyfy/imagem-2025-03-28-192206968.png" alt="" class="hidden md:block max-w-[450px] max-h-[350px]">
             <div class="pl-6 absolute rounded-2xl flex flex-col justify-center items-start gap-4 hidden md:block">
               <p class=" pr-[50%] text-2xl text-white">Confira os produtos <strong>que acabaram de chegar</strong></p>
               <button class="rounded-2xl p-4 text-white outline-2 outline-white font-bold text-xl cursor-pointer">Ver Todos</button>
@@ -134,6 +134,7 @@ function openDropdown(id) {
 
     const dropdown = document.getElementById(id);
     if (dropdown) dropdown.classList.remove("hidden");
+
 }
 
 function closeDropdown(id) {
@@ -179,7 +180,7 @@ new Splide('.n1', {
     perPage: 5,
     breakpoints: {
         1024: { perPage: 4 },
-        768: { perPage: 3 } //breakpoints do tailwind
+        768: { perPage: 3 }
     },
     gap: '1rem',
     pagination: false
@@ -190,10 +191,8 @@ new Splide('.n2', {
     perPage: 5,
     breakpoints: {
         1024: { perPage: 4 },
-        768: { perPage: 3 } //breakpoints do tailwind
+        768: { perPage: 3 }
     },
     gap: '1rem',
     pagination: false
 }).mount();
-
-//Meus olhos doem
